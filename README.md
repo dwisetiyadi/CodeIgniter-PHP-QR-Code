@@ -12,7 +12,6 @@ Introduction
 This a library for CodeIgniter Framework to make QR Code from some string given, a porting code from http://phpqrcode.sourceforge.net/.
 
 
-
 Installation and Requirements
 -----------------------------
 
