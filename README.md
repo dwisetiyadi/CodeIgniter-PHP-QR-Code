@@ -25,6 +25,7 @@ On the fly generate
 	$this->load->library('ciqrcode');
 	
 	header("Content-Type: image/png");
+	$params['data'] = 'This is a text to encode become QR Code';
 	$this->ciqrcode->generate($params);
 
 
@@ -33,7 +34,7 @@ Saved QR Code image example
 
 	$this->load->library('ciqrcode');
 	
-	$params['data'] = 'http://extradiskon.com';
+	$params['data'] = 'This is a text to encode become QR Code';
 	$params['level'] = 'H';
 	$params['size'] = 10;
 	$params['savename'] = FCPATH.'tes.png';
