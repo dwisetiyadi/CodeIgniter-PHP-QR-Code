@@ -52,8 +52,8 @@ Optional configuration
 	$this->load->library('ciqrcode');
 	
 	$config['cacheable']	= true; //boolean, the default is true
-	$config['cachedir']		= '';
-	$config['errorlog']		= '';
+	$config['cachedir']		= ''; //string, the default is application/cache/
+	$config['errorlog']		= ''; //string, the default is application/logs/
 	$config['quality']		= true; //boolean, the default is true
-	$config['size']			= 1024;
+	$config['size']			= ''; //interger, the default is 1024
 	$this->ciqrcode->initialize($config);
