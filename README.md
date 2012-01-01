@@ -24,10 +24,6 @@ On the fly generate
 
 	$this->load->library('ciqrcode');
 	
-	$params['data'] = 'http://extradiskon.com';
-	$params['level'] = 'H';
-	$params['size'] = 10;
-	
 	header("Content-Type: image/png");
 	$this->ciqrcode->generate($params);
 
