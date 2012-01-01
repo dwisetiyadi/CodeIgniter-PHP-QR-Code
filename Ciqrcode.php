@@ -65,7 +65,8 @@ class Ciqrcode
 		include "qrcode/qrmask.php";
 		include "qrcode/qrencode.php";
     }
-	
+
+
 	public function generate($params = array()) {
 		$params['data'] = (isset($params['data'])) ? $params['data'] : 'QR Code Library';
 		if (isset($params['savename'])) {
@@ -81,4 +82,7 @@ class Ciqrcode
 			return QRcode::png($params['data']);
 		}
 	}
+	
 }
+
+/* end of file */
