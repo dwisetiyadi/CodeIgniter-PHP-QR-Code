@@ -20,7 +20,7 @@ class Ciqrcode
 	var $size = 1024;
 	
     function __construct($config = array()) {
-		$this->initialize($config);
+    	$this->initialize($config);
     }
 
     public function initialize($config = array()) {
