@@ -15,7 +15,7 @@ This a library for CodeIgniter Framework to make QR Code from some string given,
 Installation and Requirements
 -----------------------------
 
-This library requires CodeIgniter Framework and GD2.
+This library requires CodeIgniter Framework and GD2 PHP extension.
 
 
 ### How to use ###
