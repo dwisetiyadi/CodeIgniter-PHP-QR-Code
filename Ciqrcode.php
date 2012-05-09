@@ -78,7 +78,13 @@ class Ciqrcode
 			QRcode::png($params['data'], $params['savename'], $level, $size, 2);
 			return $params['savename'];
 		} else {
-			return QRcode::png($params['data']);
+			$level = 'L';
+			if (isset($params['level']) && in_array($params['level'], array('L','M','Q','H'))) $level = $params['level'];
+			
+			$size = 4;
+			if (isset($params['size'])) $size = min(max((int)$params['size'], 1), 10);
+			
+			QRcode::png($params['data'], NULL, $level, $size, 2);
 		}
 	}
 }
