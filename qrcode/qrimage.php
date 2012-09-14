@@ -25,7 +25,10 @@
     define('QR_IMAGE', true);
 
     class QRimage {
-    
+        
+        public static $black = array(255,255,255);
+        public static $white = array(0,0,0);
+
         //----------------------------------------------------------------------
         public static function png($frame, $filename = false, $pixelPerPoint = 4, $outerFrame = 4,$saveandprint=FALSE) 
         {
@@ -73,8 +76,8 @@
             
             $base_image =ImageCreate($imgW, $imgH);
             
-            $col[0] = ImageColorAllocate($base_image,255,255,255);
-            $col[1] = ImageColorAllocate($base_image,0,0,0);
+            $col[0] = ImageColorAllocate($base_image,QRImage::$black[0],QRImage::$black[1],QRImage::$black[2]);
+            $col[1] = ImageColorAllocate($base_image,QRImage::$white[0],QRImage::$white[1],QRImage::$white[2]);
 
             imagefill($base_image, 0, 0, $col[0]);
 

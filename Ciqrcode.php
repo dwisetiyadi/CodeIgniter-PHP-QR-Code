@@ -67,6 +67,20 @@ class Ciqrcode
 	}
 	
 	public function generate($params = array()) {
+		if (isset($params['black']) 
+			&& is_array($params['black']) 
+			&& count($params['black']) == 3 
+			&& array_filter($params['black'], 'is_int') === $params['black']) {
+			QRimage::$black = $params['black']; 
+		}
+		
+		if (isset($params['white']) 
+			&& is_array($params['white']) 
+			&& count($params['white']) == 3 
+			&& array_filter($params['white'], 'is_int') === $params['white']) {
+			QRimage::$white = $params['white']; 
+		}
+		
 		$params['data'] = (isset($params['data'])) ? $params['data'] : 'QR Code Library';
 		if (isset($params['savename'])) {
 			$level = 'L';
