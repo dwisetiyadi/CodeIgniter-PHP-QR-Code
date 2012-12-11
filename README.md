@@ -59,5 +59,5 @@ Optional configuration
 
 
 ### Contributors ###
-1. (https://github.com/JaredHatfield "Jared Hatfield")
-2. (https://github.com/collinprice "Collin Price)
+1. [Jared Hatfield](https://github.com/JaredHatfield "Jared Hatfield")
+2. [Collin Price](https://github.com/collinprice "Collin Price")
