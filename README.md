@@ -58,6 +58,7 @@ Optional configuration
 	$this->ciqrcode->initialize($config);
 
 
-### Contributors ###
+Contributors
+------------
 1. [Jared Hatfield](https://github.com/JaredHatfield "Jared Hatfield")
 2. [Collin Price](https://github.com/collinprice "Collin Price")
