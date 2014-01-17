@@ -15,7 +15,7 @@ class Ciqrcode
 {
 	var $cacheable = true;
 	var $cachedir = 'application/cache/';
-	var $errorlog = 'application/logs/';
+
 	var $quality = true;
 	var $size = 1024;
 	
@@ -26,7 +26,7 @@ class Ciqrcode
 	public function initialize($config = array()) {
 		$this->cacheable = (isset($config['cacheable'])) ? $config['cacheable'] : $this->cacheable;
 		$this->cachedir = (isset($config['cachedir'])) ? $config['cachedir'] : FCPATH.$this->cachedir;
-		$this->errorlog = (isset($config['errorlog'])) ? $config['errorlog'] : FCPATH.$this->errorlog;
+
 		$this->quality = (isset($config['quality'])) ? $config['quality'] : $this->quality;
 		$this->size = (isset($config['size'])) ? $config['size'] : $this->size;
 		
@@ -36,8 +36,7 @@ class Ciqrcode
 		// used when QR_CACHEABLE === true
 		if (!defined('QR_CACHE_DIR')) define('QR_CACHE_DIR', $this->cachedir);
 		
-		// default error logs dir
-		if (!defined('QR_LOG_DIR')) define('QR_LOG_DIR', $this->errorlog);
+
 		
 		// if true, estimates best mask (spec. default, but extremally slow; set to false to significant performance boost but (propably) worst quality code
 		if ($this->quality) {
